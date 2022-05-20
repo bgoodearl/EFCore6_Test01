@@ -23,6 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CU.Infrastructure", "src\CU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CU.EFDataApp", "src\CU.EFDataApp\CU.EFDataApp.csproj", "{4A852FB4-53E0-4BB8-97A3-B8F87B5FCC84}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ConfigSource", "_ConfigSource", "{95A6D736-6277-405F-96E4-BC308D9700F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CU.EFDataApp", "CU.EFDataApp", "{999344E1-0287-4B35-87E7-51A3C1213B87}"
+	ProjectSection(SolutionItems) = preProject
+		_ConfigSource\src\CU.EFDataApp\appsettings.migrations.json = _ConfigSource\src\CU.EFDataApp\appsettings.migrations.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +56,8 @@ Global
 		{8BF62EA1-F081-4EDB-8FC2-905F32570791} = {8A25244C-BB4C-4EEC-9D34-81C1E24E6E71}
 		{A909EF49-4552-44F1-949B-424E8D138AFC} = {8A25244C-BB4C-4EEC-9D34-81C1E24E6E71}
 		{4A852FB4-53E0-4BB8-97A3-B8F87B5FCC84} = {8A25244C-BB4C-4EEC-9D34-81C1E24E6E71}
+		{95A6D736-6277-405F-96E4-BC308D9700F6} = {DDC3F0CB-24BD-4B00-8BA3-783AD9928FD8}
+		{999344E1-0287-4B35-87E7-51A3C1213B87} = {95A6D736-6277-405F-96E4-BC308D9700F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {462804FC-6568-483F-AFBE-5923C496D8BC}

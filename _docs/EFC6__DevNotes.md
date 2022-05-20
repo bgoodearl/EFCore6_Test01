@@ -10,6 +10,8 @@
 		<td>
             Created solution with Models and Infrastructure<br/>
             Added CU.EFDataApp to use for running Migrations from Package Manager Console<br/> 
+            Simplified CU.EFDataApp<br/>
+            Added SchoolContextFactory to CU.EFDataApp.Data<br/>
 		</td>
     </tr>
     <tr>
