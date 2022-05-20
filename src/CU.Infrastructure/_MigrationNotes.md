@@ -31,9 +31,17 @@ Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From 0
 Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From 0 -To CU6_M01_Courses -output .\SqlScripts\Schema\CU6_M01_Courses_2022.sql
 ```
 
+#### CU6_M02_AddCoursePresLookupPlus
+```powershell
+Add-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp CU6_M02_AddCoursePresLookupPlus
+Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From CU6_M01_Courses -To CU6_M02_AddCoursePresLookupPlus -output .\SqlScripts\Schema\CU6_M02_AddCoursePresLookupPlus_idempotent.sql -Idempotent
+Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From CU6_M01_Courses -To CU6_M02_AddCoursePresLookupPlus -output .\SqlScripts\Schema\CU6_M02_AddCoursePresLookupPlus.sql
+```
+
 
 #### What's in Migrations
 
 Migration                       | Details
 -------------                   | ------------
 CU6_M01_Courses                 | First migration - adds model Course, table Courses
+CU6_M02_AddCoursePresLookupPlus | Added CoursePresentationType lookup for Course plus RandomLookupType

@@ -1,5 +1,5 @@
 ﻿USE EFCore6_test01; --Database used for tests - NOT for migrations
-
+GO
 Declare @UseMigrationHistory bit = 0;
 --Declare @UseMigrationHistory bit = 1;
 
