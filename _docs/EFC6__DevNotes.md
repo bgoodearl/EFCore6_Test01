@@ -12,6 +12,7 @@
             Added CU.EFDataApp to use for running Migrations from Package Manager Console<br/> 
             Simplified CU.EFDataApp<br/>
             Added SchoolContextFactory to CU.EFDataApp.Data<br/>
+            Added first migration - CU6_M01_Courses<br/>
 		</td>
     </tr>
     <tr>

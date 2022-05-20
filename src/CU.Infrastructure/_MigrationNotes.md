@@ -22,3 +22,18 @@ Get-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp
 (add -verbose to the end of the command above to confirm the correct database and server)
 
 
+### First Migration
+
+#### CU6_M01_Courses
+```powershell
+Add-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp CU6_M01_Courses
+Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From 0 -To CU6_M01_Courses -output .\SqlScripts\Schema\CU6_M01_Courses_idempotent.sql -Idempotent
+Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From 0 -To CU6_M01_Courses -output .\SqlScripts\Schema\CU6_M01_Courses_2022.sql
+```
+
+
+#### What's in Migrations
+
+Migration                       | Details
+-------------                   | ------------
+CU6_M01_Courses                 | First migration - adds model Course, table Courses
