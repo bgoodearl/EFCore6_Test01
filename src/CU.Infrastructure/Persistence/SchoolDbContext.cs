@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CU.Infrastructure.Persistence
 {
-    public partial class SchoolDbContext : DbContext
+    public partial class SchoolDbContext : DbContext //SchoolDbContext.cs
     {
         public SchoolDbContext(DbContextOptions options)
             : base(options)

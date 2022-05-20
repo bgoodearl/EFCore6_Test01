@@ -13,6 +13,7 @@
             Simplified CU.EFDataApp<br/>
             Added SchoolContextFactory to CU.EFDataApp.Data<br/>
             Added first migration - CU6_M01_Courses<br/>
+            Removed migration, added OnModelCreating<br/>
 		</td>
     </tr>
     <tr>
