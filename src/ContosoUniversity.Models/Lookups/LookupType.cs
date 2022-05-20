@@ -33,7 +33,9 @@ namespace ContosoUniversity.Models.Lookups
                     _lookupTypesList = new List<LookupType>()
                     {
                         new LookupType(CULookupTypes.CoursePresentationType, typeof(CoursePresentationType)), //1
-                        new LookupType(CULookupTypes.RandomLookupType, typeof(RandomLookupType))
+                        new LookupType(CULookupTypes.RandomLookupType, typeof(RandomLookupType)), //3
+                        new LookupType(CULookupTypes.CourseTopicType, typeof(CourseTopicType)),
+                        new LookupType(CULookupTypes.RandomLookupType10c, typeof(RandomLookupType10c)),
                     };
                 }
                 return _lookupTypesList;

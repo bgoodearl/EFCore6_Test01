@@ -38,6 +38,13 @@ Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From C
 Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From CU6_M01_Courses -To CU6_M02_AddCoursePresLookupPlus -output .\SqlScripts\Schema\CU6_M02_AddCoursePresLookupPlus.sql
 ```
 
+#### CU6_M03_AddCourseTopicLookupPlus
+```powershell
+Add-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp CU6_M03_AddCourseTopicLookupPlus
+Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From CU6_M02_AddCoursePresLookupPlus -To CU6_M03_AddCourseTopicLookupPlus -output .\SqlScripts\Schema\CU6_M03_AddCourseTopicLookupPlus_idempotent.sql -Idempotent
+Script-Migration -Project CU.Infrastructure -StartupProject CU.EFDataApp -From CU6_M02_AddCoursePresLookupPlus -To CU6_M03_AddCourseTopicLookupPlus -output .\SqlScripts\Schema\CU6_M03_AddCourseTopicLookupPlus.sql
+```
+
 
 #### What's in Migrations
 
@@ -45,3 +52,4 @@ Migration                       | Details
 -------------                   | ------------
 CU6_M01_Courses                 | First migration - adds model Course, table Courses
 CU6_M02_AddCoursePresLookupPlus | Added CoursePresentationType lookup for Course plus RandomLookupType
+CU6_M03_AddCourseTopicLookupPlus| Added CourseTopicType lookup for Course plus RandomLookupType10c

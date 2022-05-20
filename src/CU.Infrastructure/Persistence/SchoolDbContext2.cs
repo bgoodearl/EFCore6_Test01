@@ -22,6 +22,12 @@ namespace CU.Infrastructure.Persistence
                         join => join.ToTable("_coursesPresentationTypes")
                             .Property<int>("CoursesCourseId").HasColumnName("CourseID")
                     );
+
+                e.HasMany(e => e.CourseTopics).WithMany(t => t.Courses)
+                    .UsingEntity(
+                        join => join.ToTable("_coursesTopics")
+                            .Property<int>("CoursesCourseId").HasColumnName("CourseID")
+                    );
             });
             #endregion School Entities
 
@@ -56,6 +62,31 @@ namespace CU.Infrastructure.Persistence
             });
 
             #endregion LookupBaseWith2cKey Subclass Mappings
+
+
+            //********************************************
+            #region LookupBaseWith10cKey Subclass Mappings
+
+            modelBuilder.Entity<LookupBaseWith10cKey>(e =>
+            {
+                e.HasKey(l => new { l.LookupTypeId, l.Code });
+                e.ToTable("xLookups10cKey");
+
+                e.Property(x => x.Code).HasMaxLength(10);
+                e.Property(x => x.Name).HasMaxLength(100);
+
+                e.HasIndex(l => new { l.LookupTypeId, l.Name }).IsUnique(true)
+                    .HasDatabaseName("LookupTypeAndName");
+
+                e.Property(l => l.SubType).HasColumnName("_SubType");
+
+                e.HasDiscriminator(x => x.SubType)
+                    .HasValue<CourseTopicType>((short)CULookupTypes.CourseTopicType)
+                    .HasValue<RandomLookupType10c>((short)CULookupTypes.RandomLookupType10c)
+                ;
+            });
+
+            #endregion LookupBaseWith10cKey Subclass Mappings
         }
     }
 }

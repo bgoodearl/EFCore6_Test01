@@ -7,7 +7,9 @@ namespace ContosoUniversity.Models
         {
             CoursePresentationType = 1,
             //DepartmentFacilityType = 2,
-            RandomLookupType = 3
+            RandomLookupType = 3,
+            CourseTopicType = 4,
+            RandomLookupType10c = 5,
         };
     }
 }

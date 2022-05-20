@@ -32,5 +32,12 @@ namespace ContosoUniversity.Models
             protected set { _coursePresentationTypes = value; }
         }
 
+        private ICollection<CourseTopicType>? _courseTopics;
+        public virtual ICollection<CourseTopicType> CourseTopics
+        {
+            get { return _courseTopics ?? (_courseTopics = new List<CourseTopicType>()); }
+            protected set { _courseTopics = value; }
+        }
+
     }
 }

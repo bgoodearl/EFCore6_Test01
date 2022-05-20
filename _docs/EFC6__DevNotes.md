@@ -17,6 +17,9 @@
             Added first migration (for 2nd time) - CU6_M01_Courses<br/>
             Added Lookups to persistent model<br/>
             Added migration CU6_M02_AddCoursePresLookupPlus<br/>
+            Added LookupBaseWith10cKey, CourseTopicType and RandomLookupType10c<br/>
+            New migration CU6_M03_AddCourseTopicLookupPlus,
+            EF fails to find specified Discriminator<br/>
 		</td>
     </tr>
     <tr>
