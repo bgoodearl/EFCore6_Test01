@@ -15,6 +15,7 @@
             Added first migration - CU6_M01_Courses<br/>
             Removed migration, added OnModelCreating<br/>
             Added first migration (for 2nd time) - CU6_M01_Courses<br/>
+            Added Lookups to persistent model<br/>
 		</td>
     </tr>
     <tr>

@@ -1,4 +1,5 @@
 ﻿//using ContosoUniversity.Models.Lookups;
+using ContosoUniversity.Models.Lookups;
 using System.ComponentModel.DataAnnotations;
 
 namespace ContosoUniversity.Models
@@ -24,12 +25,12 @@ namespace ContosoUniversity.Models
         [StringLength(50, MinimumLength = 3)]
         public string Title { get; set; } = string.Empty;
 
-        //private ICollection<CoursePresentationType>? _coursePresentationTypes;
-        //public virtual ICollection<CoursePresentationType> CoursePresentationTypes
-        //{
-        //    get { return _coursePresentationTypes ?? (_coursePresentationTypes = new List<CoursePresentationType>()); }
-        //    protected set { _coursePresentationTypes = value; }
-        //}
+        private ICollection<CoursePresentationType>? _coursePresentationTypes;
+        public virtual ICollection<CoursePresentationType> CoursePresentationTypes
+        {
+            get { return _coursePresentationTypes ?? (_coursePresentationTypes = new List<CoursePresentationType>()); }
+            protected set { _coursePresentationTypes = value; }
+        }
 
     }
 }
