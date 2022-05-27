@@ -3,7 +3,7 @@
 namespace ContosoUniversity.Models.Lookups
 {
     //[Table("xLookups10cKey")]
-    public class LookupBaseWith10cKey
+    public abstract class LookupBaseWith10cKey
     {
         //[Column(Order = 1)]
         //[Key]

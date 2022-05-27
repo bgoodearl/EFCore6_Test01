@@ -6,6 +6,11 @@ It uses an object model that is based on small parts of the object model found
 in the repo [ContosoU_dn6_MVCB_Clean](https://github.com/bgoodearl/ContosoU_dn6_MVCB_Clean),
 and in particular, from the branch "with_lookups2" [ContosoU_dn6_MVCB_Clean - with_lookups2](https://github.com/bgoodearl/ContosoU_dn6_MVCB_Clean/tree/with_lookups2).
 
+In this branch (b2_10c_lookups), this code demonstrated a problem with inheritance that turned out to be
+because a base class was not declared abstract.  Something EF 6 didn't complain about.
+
+With LookupBaseWith10cKey declared abstract, the problem with the EF migration went away.
+
 ## Developer Notes
 
 [Dev Notes](./_docs/EFC6__DevNotes.md)<br/>

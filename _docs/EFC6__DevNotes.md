@@ -6,6 +6,13 @@
 		<th>Notes</th>
     </tr>
     <tr>
+        <td>5/27/2022</td><td>bg</td>
+		<td>
+            Declared LookupBaseWith10cKey abstract and
+            migration CU6_M03_AddCourseTopicLookupPlus now works.<br/>
+		</td>
+    </tr>
+    <tr>
         <td>5/20/2022</td><td>bg</td>
 		<td>
             Created solution with Models and Infrastructure<br/>
